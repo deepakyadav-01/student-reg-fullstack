@@ -9,7 +9,7 @@ const StudentChart = () => {
     
     const jwtToken = localStorage.getItem('token');  // Assuming you stored the JWT token in localStorage
 
-    axios.get('http://localhost:5000/api/v1/table/students?page=1&limit=7&sortBy=fullname&order=asc', {
+    axios.get('http://localhost:5000/api/v1/table/students', {
       headers: {
         Authorization: `Bearer ${jwtToken}`,
       },

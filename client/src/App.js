@@ -25,7 +25,7 @@ function App() {
         <Route
           path="/user/*"
           element={
-            <ProtectedRoute allowedRoles={['user']}>
+            <ProtectedRoute allowedRoles={['USER']}>
             <UserLayout>
                 <Routes>
               <Route path="/dashboard"element={<UserDashboard />} />
@@ -45,11 +45,11 @@ function App() {
         <Route
           path="/admin/*"
           element={
-            <ProtectedRoute allowedRoles={['admin']}>
+            <ProtectedRoute allowedRoles={['ADMIN']}>
             <AdminLayout>
               <Routes>
                 <Route path="/dashboard" element={<Dashboard />} />
-                <Route path="/course" element={<Form />} />
+                <Route path="/form" element={<Form />} />
                 <Route path="/profile" element={<Profile />} />
               </Routes>
             </AdminLayout>

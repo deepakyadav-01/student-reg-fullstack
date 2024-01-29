@@ -4,7 +4,7 @@ import { BsArrowLeftCircle } from 'react-icons/bs'
 import { AiFillPieChart } from 'react-icons/ai'
 import { SiFuturelearn } from 'react-icons/si'
 import { CgProfile } from 'react-icons/cg'
-import Logo from '../../assets/images/logo.svg'
+// import Logo from '../../assets/images/logo.svg'
 import HamburgerButton from '../HamburgerMenuButton/HamburgerButton'
 
 const AdminSidebar = () => {
@@ -14,7 +14,7 @@ const AdminSidebar = () => {
 
   const Menus = [
     { title: 'Dashboard', path: '/admin/dashboard', src: <AiFillPieChart /> },
-    { title: 'Course', path: '/admin/course', src: <SiFuturelearn /> },
+    { title: 'form', path: '/admin/form', src: <SiFuturelearn /> },
     { title: 'Profile', path: '/admin/profile', src: <CgProfile /> },
     /*
     { title: 'Signin', path: '/login', src: <SiOpenaccess />, },
@@ -36,7 +36,7 @@ const AdminSidebar = () => {
         />
         <Link to='#'>
           <div className={`flex ${open && 'gap-x-4'} items-center`}>
-            <img src={Logo} alt='' className='pl-2' />
+            <img src='m_logo.png' alt='' className='pl-2' />
             {open && (
               <span className='text-xl font-medium whitespace-nowrap dark:text-white'>
                 Mindfire

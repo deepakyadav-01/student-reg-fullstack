@@ -30,14 +30,10 @@ const DropdownProfile = () => {
         <div className="flex justify-center items-center space-x-3 cursor-pointer">
           
           <div className="w-10 h-10 rounded-full overflow-hidden border-2 dark:border-white border-gray-900">
-            <img
-              src="https://images.unsplash.com/photo-1610397095767-84a5b4736cbd?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
-              alt=""
-              className="w-full h-full object-cover"
-            />
+         <img src="m_logo.png" alt="" />
           </div>
           <div className="font-semibold dark:text-white text-gray-900 text-lg">
-            <div className="cursor-pointer">Anand</div>
+            <div className="cursor-pointer">Deepak</div>
           </div>
         </div>
         {isOpen && (

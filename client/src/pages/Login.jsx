@@ -13,7 +13,7 @@ export default function Login() {
     try {
       // Make the API request to login
       const response = await axios.post(
-        "http://localhost:5000/api/v1/admin/login",
+        "http://localhost:5000/api/v1/auth/login",
         {
           username,
           password,
@@ -31,9 +31,9 @@ export default function Login() {
 
 
       // Navigate based on the user role
-      if (role === "user") {
+      if (role === "USER") {
         navigate("/user/dashboard");
-      } else if (role === "admin") {
+      } else if (role === "ADMIN") {
         navigate("/admin/dashboard");
       }
     } catch (error) {
@@ -43,58 +43,56 @@ export default function Login() {
   };
 
   return (
-    <div className="bg-blue-400">
-    <Navbar/>
-    <div className=" flex flex-row min-h-screen overflow-hidden">
-      {/* card 1 */}
-      <div className="w-full p-6 m-auto bg-white rounded-md  ring-blue-800 lg:max-w-xl">
-        <h1 className="text-3xl font-semibold text-center text-blue-700 uppercase">
-          Login
-        </h1>
-        <form className="mt-6" onSubmit={handleLogin}>
-          <div className="mb-2">
-            <label
-              htmlFor="username" // Use htmlFor instead of "for"
-              className="block text-sm font-semibold text-gray-800"
-            >
-              Username
-            </label>
-            <input
-              type="text"
-              id="username"
-              value={username} // Bind value to the state variable
-              onChange={(e) => setUsername(e.target.value)} // Update state on input change
-              className="block w-full px-4 py-2 mt-2 text-blue-700 bg-white border rounded-md focus:border-blue-400 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40"
-            />
-          </div>
-          <div className="mb-2">
-            <label
-              htmlFor="password" // Use htmlFor instead of "for"
-              className="block text-sm font-semibold text-gray-800"
-            >
-              Password
-            </label>
-            <input
-              type="password"
-              id="password"
-              value={password} // Bind value to the state variable
-              onChange={(e) => setPassword(e.target.value)} // Update state on input change
-              className="block w-full px-4 py-2 mt-2 text-blue-700 bg-white border rounded-md focus:border-blue-400 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40"
-            />
-          </div>
-
-          <div className="mt-6">
-            <button
-              type="submit"
-              className="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-blue-700 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600"
-            >
-              Login
-            </button>
-          </div>
-        </form>
+    <div className="bg-blue-400 h-screen">
+      <Navbar />
+      <div className="flex flex-col items-center justify-center h-full">
+        {/* card 1 */}
+        <div className="w-full p-6 bg-white rounded-md ring-blue-800 lg:max-w-md">
+          <h1 className="text-3xl font-semibold text-center text-blue-700 uppercase mb-6">
+            Login
+          </h1>
+          <form className="space-y-4" onSubmit={handleLogin}>
+            <div>
+              <label
+                htmlFor="username"
+                className="block text-sm font-semibold text-gray-800"
+              >
+                Username
+              </label>
+              <input
+                type="text"
+                id="username"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+                className="w-full px-4 py-2 text-blue-700 bg-white border rounded-md focus:border-blue-400 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40"
+              />
+            </div>
+            <div>
+              <label
+                htmlFor="password"
+                className="block text-sm font-semibold text-gray-800"
+              >
+                Password
+              </label>
+              <input
+                type="password"
+                id="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                className="w-full px-4 py-2 text-blue-700 bg-white border rounded-md focus:border-blue-400 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40"
+              />
+            </div>
+            <div>
+              <button
+                type="submit"
+                className="w-full px-4 py-2 text-white transition-colors duration-200 transform bg-blue-700 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600"
+              >
+                Login
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
-
-    </div>
     </div>
   );
 }
