@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-
+import { API_URLS } from "../config.js";
 export default function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -12,13 +12,11 @@ export default function Login() {
 
     try {
       // Make the API request to login
-      const response = await axios.post(
-        "http://localhost:5000/api/v1/auth/login",
-        {
-          username,
-          password,
-        }
-      );
+      const response = await axios.post(API_URLS.LOGIN, {
+        username,
+        password,
+      });
+
 
       // Assuming the API response contains a JWT token and user role
       const { token, role, user } = response.data;

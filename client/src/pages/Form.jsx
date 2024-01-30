@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./App.css";
+import "../components/Form.css";
 import { toast } from "react-toastify";
 
 //initializing the form data

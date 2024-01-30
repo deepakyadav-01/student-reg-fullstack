@@ -8,18 +8,6 @@ const PieChart = () => {
     labels: ['Total Users', 'Active Users'],
   });
 
-//   useEffect(() => {
-//     // Fetch chart data from your API
-//     axios.get('YOUR_API_ENDPOINT')  // Replace with your API endpoint
-//       .then(response => {
-//         // Assuming your API response has a data field containing chart details
-//         setChartData(response.data);
-//       })
-//       .catch(error => {
-//         console.error('Error fetching chart data:', error);
-//       });
-//   }, []);
-
   const chartOptions = {
     series: chartData.series,
     chart: {

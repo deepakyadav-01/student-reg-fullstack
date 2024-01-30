@@ -28,16 +28,18 @@ h1.text-center.text-light {
     margin-top: 90px;
     transition: transform 0.2s;
     z-index: 0;
+    
 }
 
 
 
 .p-2 {
+    
     position: relative;
     max-width: 900px;
     width: 100%;
     border-radius: 6px;
-    background-color: #fff;
+    background-color: #e5e7eb;
 
 }
 
@@ -68,7 +70,7 @@ h1.text-center.text-light {
 .p-2 form {
     position: relative;
     margin-top: 16px;
-    min-height: 490px;
+    height:430px;
     background-color: #f2f2f2;
 }
 
@@ -113,7 +115,7 @@ label {
 }
 
 .input_field textarea {
-    width: 490px;
+    width: 760px;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
@@ -133,7 +135,7 @@ input[type="reset"] {
     align-items: center;
     justify-content: center;
     height: 45px;
-    width: 503px;
+    width: 390px;
     border: none;
     outline: none;
     background-color: #9ca3af;

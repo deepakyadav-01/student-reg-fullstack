@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import ApexCharts from 'react-apexcharts';
-
+import { API_URLS } from "../../config.js";
 const StudentChart = () => {
   const [studentData, setStudentData] = useState([]);
 
@@ -9,7 +9,7 @@ const StudentChart = () => {
     
     const jwtToken = localStorage.getItem('token');  // Assuming you stored the JWT token in localStorage
 
-    axios.get('http://localhost:5000/api/v1/admin/users', {
+    axios.get(API_URLS.USERS, {
       headers: {
         Authorization: `Bearer ${jwtToken}`,
       },

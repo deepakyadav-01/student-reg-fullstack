@@ -2,7 +2,7 @@ import React from 'react'
 
 const Profile = () => {
     return <div className='dark:text-white'><div className="container mx-auto p-4">
-    <div className="max-w-md mx-auto bg-white dark:bg-gray-800 rounded-md overflow-hidden shadow-md">
+    <div className="max-w-md mx-auto bg-gray-300 dark:bg-gray-600 rounded-md overflow-hidden shadow-md">
       <div className="p-6">
         <h2 className="text-xl font-semibold dark:text-white">Fullname:  Deepak</h2>
         <p className="text-black dark:text-gray-300">DOB:  10/10/2001</p>
