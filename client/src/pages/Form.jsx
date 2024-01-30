@@ -102,7 +102,8 @@ const Form = ({ onFormSubmit, selectedStudent }) => {
   };
 
   return (
-    <div className="card" id="cardform">
+
+    
       <div className="p-2 ">
         <header>Student Registration</header>
         {/* form start */}
@@ -271,7 +272,8 @@ const Form = ({ onFormSubmit, selectedStudent }) => {
           </div>
         </form>
       </div>
-    </div>
+
+
   );
 };
 

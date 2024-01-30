@@ -1,33 +1,12 @@
-import Student from "../../model/Student.js";
+import * as studentService from '../../Services/deleteStudent.js';
 
-// DELETE request Delete an employee using its ID
 export const deleteStudent = async (req, res) => {
   try {
     const { studentId } = req.params;
-
-    // Check if the employee exists
-    const existingStudent = await Student.findById(studentId);
-
-    if (!existingStudent) {
-      return res.status(404).json({
-        success: false,
-        message: "Student not found",
-      });
-    }
-
-    // Remove the employee from the database
-    await Student.findByIdAndRemove(studentId);
-
-    res.status(200).json({
-      success: true,
-      message: "Student deleted successfully",
-    });
+    const result = await studentService.deleteStudentById(studentId);
+    res.status(200).json(result);
   } catch (error) {
     console.error(error);
-    res.status(500).json({
-      success: false,
-      message: "Error while deleting student",
-      error,
-    });
+    res.status(error.status || 500).json({ error: error.message || 'Internal Server Error' });
   }
 };

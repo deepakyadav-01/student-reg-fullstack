@@ -4,7 +4,6 @@ import { BsArrowLeftCircle } from 'react-icons/bs'
 import { AiFillPieChart } from 'react-icons/ai'
 import { SiFuturelearn } from 'react-icons/si'
 import { CgProfile } from 'react-icons/cg'
-// import Logo from '../../assets/images/logo.svg'
 import HamburgerButton from '../HamburgerMenuButton/HamburgerButton'
 
 const AdminSidebar = () => {
@@ -14,7 +13,7 @@ const AdminSidebar = () => {
 
   const Menus = [
     { title: 'Dashboard', path: '/admin/dashboard', src: <AiFillPieChart /> },
-    { title: 'form', path: '/admin/form', src: <SiFuturelearn /> },
+    { title: 'Form', path: '/admin/form', src: <SiFuturelearn /> },
     { title: 'Profile', path: '/admin/profile', src: <CgProfile /> },
     /*
     { title: 'Signin', path: '/login', src: <SiOpenaccess />, },

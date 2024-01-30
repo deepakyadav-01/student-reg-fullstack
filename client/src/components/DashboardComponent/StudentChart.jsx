@@ -9,7 +9,7 @@ const StudentChart = () => {
     
     const jwtToken = localStorage.getItem('token');  // Assuming you stored the JWT token in localStorage
 
-    axios.get('http://localhost:5000/api/v1/table/students', {
+    axios.get('http://localhost:5000/api/v1/admin/users', {
       headers: {
         Authorization: `Bearer ${jwtToken}`,
       },
@@ -32,7 +32,7 @@ const StudentChart = () => {
       },
       series: [{
         name: 'students',
-        data: [30,40,45,50,49,60,70,91,125]
+        data: [10,20,30,40,50,60,70,80,90]
       }],
       xaxis: {
         categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']

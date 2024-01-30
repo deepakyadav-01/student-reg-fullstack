@@ -5,7 +5,7 @@ import ApexCharts from 'react-apexcharts';
 const StudentRatio = () => {
   const [RatioData, setRatioData] = useState({
     series: [10, 5],
-    labels: ['Total Student', 'Total Users'],
+    labels: ['Total Users', 'Total Admins'],
   });
 
 

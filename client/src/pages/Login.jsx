@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import Navbar from "../components/Navbar"
+
 export default function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -44,7 +44,7 @@ export default function Login() {
 
   return (
     <div className="bg-blue-400 h-screen">
-      <Navbar />
+     
       <div className="flex flex-col items-center justify-center h-full">
         {/* card 1 */}
         <div className="w-full p-6 bg-white rounded-md ring-blue-800 lg:max-w-md">
@@ -96,3 +96,4 @@ export default function Login() {
     </div>
   );
 }
+
