@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 
 
-
 /* for heading */
 h1.text-center.text-light {
     text-align: center;
@@ -28,18 +27,18 @@ h1.text-center.text-light {
     margin-top: 90px;
     transition: transform 0.2s;
     z-index: 0;
-    
 }
 
-
+#cardtable {
+    background-color: #6b7280;
+}
 
 .p-2 {
-    
     position: relative;
     max-width: 900px;
     width: 100%;
     border-radius: 6px;
-    background-color: #e5e7eb;
+    background-color: #fff;
 
 }
 
@@ -70,7 +69,7 @@ h1.text-center.text-light {
 .p-2 form {
     position: relative;
     margin-top: 16px;
-    height:430px;
+    min-height: 490px;
     background-color: #f2f2f2;
 }
 
@@ -115,7 +114,7 @@ label {
 }
 
 .input_field textarea {
-    width: 760px;
+    width: 490px;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
@@ -135,7 +134,7 @@ input[type="reset"] {
     align-items: center;
     justify-content: center;
     height: 45px;
-    width: 390px;
+    width: 503px;
     border: none;
     outline: none;
     background-color: #9ca3af;
@@ -161,7 +160,21 @@ input[type="reset"]:hover {
     border-collapse: collapse;
 }
 
+/* for table */
 
+td,
+th {
+    border: 1px solid black;
+    text-align: left;
+    padding: 8px 15px;
+    color: black;
+}
+
+th {
+
+
+    background-color: white;
+}
 
 .text-light {
     color: #333;
@@ -280,7 +293,14 @@ input[type="reset"]:hover {
     background-color: #fff;
 }
 
+#studentList {
+    border: none;
+    width: 80%
+}
 
+#dob {
+    width: 210px;
+}
 
 .gender {
     margin: 4px 20px;
@@ -291,6 +311,11 @@ input[type="reset"]:hover {
 }
 
 
+#cardtable:hover,
+#cardform:hover,
+#theme_div:hover {
+    scale: 1.03;
+}
 
 
 /* Add this to your CSS file */

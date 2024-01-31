@@ -12,18 +12,18 @@ const Toggle = () => {
   return (
     <div
       className={`relative w-12 h-6 rounded-full p-1 flex items-center justify-between ${
-        theme === 'dark' ? 'bg-black' : 'bg-gray-600'
+        theme === 'dark' ? 'bg-gray-400' : 'bg-yellow-500'
       } transition-colors duration-300 ease-in-out cursor-pointer`}
       onClick={toggleTheme}
     >
       <FaSun
-        className={`text-yellow-500 text-2xl z-10 ${
+        className={`text-white text-2xl z-10 ${
           theme === 'dark' ? 'opacity-0' : 'opacity-100'
         }`}
       />
       <div
         className={`absolute w-5 h-5 rounded-full ${
-          theme === 'dark' ? 'bg-gray-500' : 'bg-gray-800'
+          theme === 'dark' ? 'bg-gray-400' : 'bg-yellow-500'
         } shadow-md transform transition-transform duration-300 ease-in-out ${
           theme === 'dark' ? 'translate-x-6' : 'translate-x-0'
         }`}

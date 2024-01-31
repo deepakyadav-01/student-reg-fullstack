@@ -31,7 +31,7 @@ const UserSidebar = () => {
         <BsArrowLeftCircle
           className={`${
             !open && 'rotate-180'
-          } absolute text-3xl bg-white fill-slate-800  rounded-full cursor-pointer top-9 -right-4 dark:fill-gray-400 dark:bg-gray-800`}
+          } absolute text-3xl bg-white fill-slate-800  rounded-full cursor-pointer top-9 -right-4 dark:fill-gray-400 dark:bg-gray-900`}
           onClick={() => setOpen(!open)}
         />
         <Link to='#'>

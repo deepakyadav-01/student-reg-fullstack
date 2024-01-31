@@ -24,7 +24,7 @@ const DropdownProfile = () => {
     }
   };
   return (
-    <div className={` dark:bg-gray-800 w-64 flex justify-center items-center ${isOpen ? 'border-indigo-700 transform transition duration-300' : ''}`}>
+    <div className={` dark:bg-gray-900 w-64 flex justify-center items-center ${isOpen ? 'border-indigo-700 transform transition duration-300' : ''}`}>
       <Toggle/>
       <div onClick={toggleDropdown} className="relative border-b-4 border-transparent py-3">
         <div className="flex justify-center items-center space-x-3 cursor-pointer">
@@ -37,7 +37,7 @@ const DropdownProfile = () => {
           </div>
         </div>
         {isOpen && (
-          <div className="absolute w-50 px-5 py-3 dark:bg-gray-800 bg-white rounded-lg shadow border dark:border-transparent mt-5">
+          <div className="absolute w-50 px-5 py-3 dark:bg-gray-900 bg-white rounded-lg shadow border dark:border-transparent mt-5">
             <ul className="space-y-3 dark:text-white">
               <li className="font-medium">
                 <a href="#" className="flex items-center transform transition-colors duration-200 border-r-4 border-transparent hover:border-indigo-700">

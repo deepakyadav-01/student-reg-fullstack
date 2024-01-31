@@ -21,7 +21,7 @@ import DropdownProfile from './DropdownProfile';
 
 const Navbar = () => {
   return (
-    <nav className='bg-gray-200 border-gray-50 m-5 px-2 py-2.5 rounded-3xl shadow-lg dark:bg-gray-800 w-auto'>
+    <nav className='bg-gray-200 border-gray-50 m-5 px-2 py-2.5 rounded-3xl shadow-lg dark:bg-gray-900 w-auto'>
       <div className='container'>
 
         {/* Desktop Profile Dropdown */}
